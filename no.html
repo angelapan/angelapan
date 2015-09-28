@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>sorry</title>
+		<link type="text/css" rel="stylesheet" href="cyoa_stylesheet.css" />	
+		<style>
+		#typingtext {
+			background-color:#000;
+			width:700px;
+			height:120px;
+			padding:12px;
+			color:#c30000;
+			font-family: courier;
+		        font-size:30px;
+			line-height:1.5em;
+		}
+		p {
+			color: #c30000;
+		}
+
+		body {
+			background-color: black;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div id="typingtext"></div>
+		<script>
+		var myString = "...you died";
+		var myArray = myString.split("");
+		var loopTimer;
+		function frameLooper() {
+			if(myArray.length > 0) {
+				document.getElementById("typingtext").innerHTML += myArray.shift();
+			} else {
+				clearTimeout(loopTimer); 
+		                return false;
+			}
+			loopTimer = setTimeout('frameLooper()',70);
+		}
+		frameLooper();
+		</script>
+
+		<p>>you needed the help</p>
+		<p>>you wandered around</p>
+		<p>>you got lost</p>
+		<p>>she found you</p>
+		<p>>maybe make better choices next time</p>
+	</body>
+</html>
+
+
+
