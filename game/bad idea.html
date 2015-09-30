@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>told you</title>
+		<link type ="text/css" rel="stylesheet" href= "stylesheet.css"/>
+		<style>
+			#typingtext {
+				background-color:#000;
+				width:700px;
+				height:120px;
+				padding:12px;
+				color:#c30000;
+				font-family: courier;
+			        font-size:30px;
+				line-height:1.5em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="typingtext"></div>
+		<script>
+		var myString = "...you died";
+		var myArray = myString.split("");
+		var loopTimer;
+		function frameLooper() {
+			if(myArray.length > 0)
+			{
+				document.getElementById("typingtext").innerHTML += myArray.shift();
+			} else {
+				clearTimeout(loopTimer); 
+		                return false;
+			}
+			loopTimer = setTimeout('frameLooper()',70);
+		}
+		frameLooper();
+		</script>
+		<p>cause: unknown</p>
+		<p>>it was a bad idea</p>
+		<p>>she just wants you to hear her out</p>
+		<br>
+		<p><a href= "start over.html" class="highlight">start over</a></p>
+
+	</body>
+</html>
