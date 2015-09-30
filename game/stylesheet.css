@@ -13,3 +13,7 @@ p {
 h3 {
 	color:lime; font-family: courier;
 }
+
+.small {
+	color: lime; font-family: courier; font-size: 11px;
+}
