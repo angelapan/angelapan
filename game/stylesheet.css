@@ -1,0 +1,11 @@
+body {
+	background-color: black;
+}
+
+p {
+	color: lime; font-family: courier; 
+}
+
+.highlight {
+	color: lime; font-family: courier;
+}
